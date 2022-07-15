@@ -1,6 +1,6 @@
 #  🎓 NCD.L2.sample--art-demo dapp
 This repository contains a complete frontend applications (Vue.js, React, Angular) to work with 
-<a href="https://github.com/Learn-NEAR/NCD.L1.sample--art-demo" target="_blank">NCD.L1.sample--art-demo smart contract</a> targeting the NEAR platform:
+<a href="https://github.com/OlexandrSai/NCD.L1.sample--art-demo" target="_blank">NCD.L1.sample--art-demo smart contract</a> targeting the NEAR platform:
 1. Vue.Js (main branch)
 2. React (react branch)
 3. Angular (angular branch)
@@ -13,8 +13,8 @@ Any content produced by NEAR, or developer resources that NEAR provides, are for
 
 
 ## ⚡  Usage
-Right now I sent PR to NCD.L1.sample--art-demo with version of contract which will work with this frontend: 
-<a href="https://github.com/OlexandrSai/NCD.L1.sample--art-demo" target="_blank">code</a>, after review this line will be removed from README file
+To make this frontend work with your own smart contract, you need to deploy this  
+<a href="https://github.com/OlexandrSai/NCD.L1.sample--art-demo" target="_blank">code</a> to your testnet account
 
 Home page view
 

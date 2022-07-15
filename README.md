@@ -1,6 +1,6 @@
 #  🎓 NCD.L2.sample--art-demo dapp
 This branch contains a complete frontend React application to work with 
-<a href="https://github.com/Learn-NEAR/NCD.L1.sample--art-demo" target="_blank">NCD.L1.sample--art-demo smart contract</a> targeting the NEAR platform
+<a href="https://github.com/OlexandrSai/NCD.L1.sample--art-demo" target="_blank">NCD.L1.sample--art-demo smart contract</a> targeting the NEAR platform
 
 The goal of this repository is to make it as easy as possible to get started writing frontend with React for AssemblyScript contracts built to work with NEAR Protocol.
 
@@ -23,7 +23,7 @@ UI walkthrough
 </a>
 
 
-You can use this app with contract ids which were deployed by the creators of this repo or you can use it with your own deployed contract ids.
+You can use this app with contract id which were deployed by the creators of this repo or you can use it with your own deployed contract id.
 
 To deploy sample--art-demo to your account visit <a href="https://github.com/OlexandrSai/NCD.L1.sample--art-demo" target="_blank">this repo (smart contract deployment instructions are inside):</a> 
 
@@ -31,7 +31,7 @@ Also you can watch this video :
 
 <a href="https://www.loom.com/share/fe4ee8caf908418e88f22dce55145969" target="_blank">![image](https://user-images.githubusercontent.com/38455192/179179390-b419927c-fbf2-4cf0-b727-7e8406e9a5fc.png)</a>
 
-After you successfully deployed smart contracts and you have contract id, you can input them on a deployed <a href="https://art-demo-react.onrender.com/" target="_blank">website </a> or you can clone the repo and put contract ids inside .env file :
+After you successfully deployed smart contract and you have contract id, you can input it on a deployed <a href="https://art-demo-react.onrender.com/" target="_blank">website </a> or you can clone the repo and put contract id inside .env file :
 
 ```
 REACT_APP_CONTRACT_ID = "put your smart-contract id here"

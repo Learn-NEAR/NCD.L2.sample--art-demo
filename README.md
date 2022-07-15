@@ -14,7 +14,7 @@ Any content produced by NEAR, or developer resources that NEAR provides, are for
 
 ## ⚡  Usage
 To make this frontend work with your own smart contract, you need to deploy this  
-<a href="https://github.com/OlexandrSai/NCD.L1.sample--art-demo" target="_blank">code</a> to your testnet account
+<a href="https://github.com/OlexandrSai/NCD.L1.sample--art-demo" target="_blank">smart contract</a> to your testnet account
 
 Home page view
 

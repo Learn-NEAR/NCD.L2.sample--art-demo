@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import store from '../store/store.js'
 import Home from '../views/Home.vue'
 
 
@@ -22,12 +21,6 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes
-})
-
-router.beforeEach((to,from) => {
-  if (store.state.accountId&&(to.path==="/"&&from.path==="/")) {
-    router.push('/dashboard')
-  }
 })
 
 export default router 

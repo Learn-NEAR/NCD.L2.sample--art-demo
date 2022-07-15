@@ -1,62 +1,51 @@
-import { ref, onMounted } from "vue";
-import {wallet} from '@/services/near'
+import { ref } from "vue";
 import {
+    wallet,
     getTempDesign,
+    getMyClaimedDesign,
     generateDesign,
     claimDesign,
     burnDesign,
-    getViewMyDesign
-  } from "@/services/near";
+} from "@/services/near";
 
-  const accountId = wallet.getAccountId();
+const generatedDesign = ref(null)
+const myDesign = ref(null)
+const isLoading = ref(false)
+const err = ref(null)
 
-export const useArtDemo= () => {
-    const generatedDesign  = ref(false)
-    const myDesign = ref(false)
-    const isLoading = ref(false)
-    const  err = ref(null)
+export const useArtDemo = () => {
 
-    onMounted(async () => {
-        try {
-            isLoading.value=true
-            generatedDesign.value = await getTempDesign(accountId)
-            if (generatedDesign.value === null) {
-                await handleGenerateDesign(accountId)
-            }
-            myDesign.value = await getViewMyDesign(accountId)
-            isLoading.value=false
-        } catch (e) {
-            err.value = e
-            console.log(err)
-        }
-    })
+    const handleGetTempDesign = async (accountId) => {
+        return await getTempDesign(accountId)
+    }
+
+    const handleGetMyClaimedDesign = async (accountId) => {
+        return await getMyClaimedDesign(accountId)
+    }
 
     const handleGenerateDesign = async (accountId) => {
-        isLoading.value=true
-        await generateDesign(accountId)
+        await generateDesign()
         generatedDesign.value = await getTempDesign(accountId)
-        isLoading.value=false
     }
 
     const handleClaimDesign = async (seed) => {
-        isLoading.value=true
-        await claimDesign(seed).then(res=>console.log(res), res=>console.log(res))
-        myDesign.value = await getViewMyDesign(accountId)
-        isLoading.value=false
+        await claimDesign(seed).then(res => console.log(res), res => console.log(res))
+        myDesign.value = await getMyClaimedDesign(wallet.getAccountId())
     }
 
     const handleBurnDesign = async () => {
-        isLoading.value=true
         await burnDesign()
-        myDesign.value = false
-        isLoading.value=false
+        myDesign.value = null
     }
 
     return {
         isLoading,
         generatedDesign,
         myDesign,
-        generateDesign:  handleGenerateDesign,
+        err,
+        getTempDesign:handleGetTempDesign,
+        getMyClaimedDesign: handleGetMyClaimedDesign,
+        generateDesign: handleGenerateDesign,
         claimDesign: handleClaimDesign,
         burnDesign: handleBurnDesign
     }

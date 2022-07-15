@@ -1,7 +1,13 @@
 import { createApp } from 'vue'
-import store from './store/store.js'
 import App from './App.vue'
+import Toast from "vue-toastification";
 import router from './router/index.js'
 import './index.css'
+import "vue-toastification/dist/index.css";
 
-createApp(App).use(store).use(router).mount('#app')
+const app = createApp(App)
+
+app.use(router)
+app.use(Toast)
+
+app.mount('#app')
